@@ -343,6 +343,12 @@ public:
     // int8       syncType #=0      # SYNC = 0, ASYNC = 1
     bool movel(std::array<float, NUM_TASK> & posTarget, std::array<float, 2> maxSpeed, std::array<float, 2> maxAcceleration, MOVE_REFERENCE eMoveReference = MOVE_REFERENCE_BASE);
 
+    // float64[6] pos               # position  
+    // float64[2] vel               # velocity
+    // float64[2] acc               # acceleration
+    // float64    time              # f
+    bool servol(std::array<float, NUM_TASK> & posTarget, std::array<float, 2> maxSpeed, std::array<float, 2> maxAcceleration);
+
 private:
 
     int     m_nVersionDRCF;

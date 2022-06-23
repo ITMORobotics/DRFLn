@@ -593,3 +593,7 @@ bool DoosanRobot::movel(std::array<float, NUM_TASK> & posTarget, std::array<floa
 {
     return Drfl.movel(posTarget.data(), maxSpeed.data(), maxAcceleration.data(), 0.0, MOVE_MODE_ABSOLUTE, eMoveReference);
 }
+bool servol(std::array<float, NUM_TASK> & posTarget, std::array<float, 2> maxSpeed, std::array<float, 2> maxAcceleration)
+{
+    return Drfl.servol(posTarget.data(), maxSpeed.data(), maxAcceleration.data(), 0.0);
+}
