@@ -347,7 +347,7 @@ public:
     // float64[2] vel               # velocity
     // float64[2] acc               # acceleration
     // float64    time              # f
-    bool servol(std::array<float, NUM_TASK> & posTarget, std::array<float, 2> maxSpeed, std::array<float, 2> maxAcceleration);
+    bool servol(std::array<float, NUM_TASK> & posTarget, std::array<float, 2> maxSpeed, std::array<float, 2> maxAcceleration, float fTargetTime = 0);
 
 private:
 
